@@ -1,11 +1,11 @@
 import { Schema, model, models } from "mongoose";
 
-const notesSchema = new Schema({
+const NotesSchema = new Schema({
     title: {type: String, required: true},
     description: {type: String},
     user: {type: Schema.Types.ObjectId, ref:"User"},
 })
 
-const Note = models.note || model("Note", notesSchema);
+const Note = models.Note || model("Note", NotesSchema);
 
 export default Note;
