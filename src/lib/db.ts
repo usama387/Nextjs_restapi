@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 
+// #1 Storing my env in a variable
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// An async function which connects the app with db using same connection
+// #2 An async function which connects the app with db using same connection if available this function is utilized in apis to connect with db
 const connectToDb = async () => {
   const connectionState = mongoose.connection.readyState;
 
